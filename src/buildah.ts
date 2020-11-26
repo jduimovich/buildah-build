@@ -34,6 +34,9 @@ export class BuildahCli implements Buildah {
             args.push('--build-arg');
             args.push(buildArg);
         })
+        
+        args.push('--format=docker'); 
+        
         args.push('-t');
         args.push(image);
         args.push(context);
